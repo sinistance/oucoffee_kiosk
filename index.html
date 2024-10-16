@@ -5,11 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Ou Coffee</title>
-    <link rel="stylesheet" href="./style.css">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <style>
+      body {
+        background: #1c1b1b;
+      }
+      .mySlides {
+        display: none;
+      }
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+    </style>
   </head>
-  <body style="background: #1c1b1b;">
-    <script src="https://static.elfsight.com/platform/platform.js" async></script>
-<div class="elfsight-app-d7331397-7fb9-492f-a8f2-54ae9c4ae252" data-elfsight-app-lazy></div>
+  <body>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <script src="https://static.elfsight.com/platform/platform.js" async></script>
+        <div class="elfsight-app-d7331397-7fb9-492f-a8f2-54ae9c4ae252" data-elfsight-app></div>
+      </div>
+    </div>
+    <script>
+      let slideIndex = 0;
+      showSlides();
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 60000); // Change image every x seconds
+      }
+    </script>
   </body>
 </html>
