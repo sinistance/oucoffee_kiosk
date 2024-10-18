@@ -14,32 +14,33 @@
         text-align: center;
         font-family: serif;
       }
-/*      .mySlides {*/
-/*        display: none;*/
-/*      }*/
-/*      .fade {*/
-/*        animation-name: fade;*/
-/*        animation-duration: 1.5s;*/
-/*      }*/
+      .mySlides {
+        display: block;
+      }
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
     </style>
   </head>
   <body>
 
-    <h1>🤩 Mention @oucoffee_ di story IG kamu ya ☕️</h1>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="elfsight-app-0b6e76e1-39f3-4c6a-9dac-9e5b474e0901" data-elfsight-app-lazy></div>
+      </div>
+      <!--<div class="mySlides fade">-->
+      <!--<div class="elfsight-app-0b6e76e1-39f3-4c6a-9dac-9e5b474e0901" data-elfsight-app-lazy></div>-->
+      <!--</div>-->
+      <div class="mySlides fade">
+        <h1>🤩 Mention @oucoffee_ di story IG kamu ya ☕️</h1>
+        <!-- Place <div> tag where you want the feed to appear -->
+        <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
+      </div>
+    </div>
 
-    <!--<div class="slideshow-container">-->
-    <!--  &lt;!&ndash;<div class="mySlides fade">&ndash;&gt;-->
-    <!--  &lt;!&ndash;  <div class="elfsight-app-d7331397-7fb9-492f-a8f2-54ae9c4ae252" data-elfsight-app></div>&ndash;&gt;-->
-    <!--  &lt;!&ndash;</div>&ndash;&gt;-->
-    <!--  <div class="mySlides fade">-->
-    <!--  <div class="elfsight-app-0b6e76e1-39f3-4c6a-9dac-9e5b474e0901" data-elfsight-app-lazy></div>-->
-    <!--  </div>-->
-    <!--</div>-->
-    <!-- Place <div> tag where you want the feed to appear -->
 
 
-    <!-- Place <div> tag where you want the feed to appear -->
-    <div id="curator-feed-default-feed-layout"><a href="https://curator.io" target="_blank" class="crt-logo crt-tag">Powered by Curator.io</a></div>
 
     <!-- The Javascript can be moved to the end of the html page before the </body> tag -->
     <script type="text/javascript">
@@ -51,25 +52,24 @@
     })();
     </script>
 
-
-  </body>
-  <!--<script src="https://static.elfsight.com/platform/platform.js" async></script>-->
+    <script src="https://static.elfsight.com/platform/platform.js" async></script>
     <script>
-//      let slideIndex = 0;
-//      showSlides();
-//
-//      function showSlides() {
-//        let i;
-//        let slides = document.getElementsByClassName("mySlides");
-//        for (i = 0; i < slides.length; i++) {
-//          slides[i].style.display = "none";
-//        }
-//        slideIndex++;
-//        if (slideIndex > slides.length) {slideIndex = 1}
-//        slides[slideIndex-1].style.display = "block";
-//        setTimeout(showSlides, 6000); // Change image every x seconds
-//      }
+      let slideIndex = 0;
+      setTimeout(showSlides, 5000);
+
+      function showSlides() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none";
+        }
+        slideIndex++;
+        if (slideIndex > slides.length) {slideIndex = 1}
+        slides[slideIndex-1].style.display = "block";
+        setTimeout(showSlides, 60000); // Change image every x seconds
+      }
 
       setTimeout(function () { location.reload(1); }, 3600000);
     </script>
+  </body>
 </html>
