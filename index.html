@@ -18,8 +18,12 @@
         display: block;
       }
       .fade {
-        animation-name: fade;
-        animation-duration: 1.5s;
+        animation-name: fadeIn;
+        animation-duration: 3s;
+      }
+      @keyframes fadeIn {
+        0% { opacity: 0; }
+        100% { opacity: 1; }
       }
     </style>
   </head>
@@ -69,7 +73,7 @@
         slideIndex++;
         if (slideIndex > slides.length) {slideIndex = 1}
         slides[slideIndex-1].style.display = "block";
-        setTimeout(showSlides, 60000); // Change image every x seconds
+        setTimeout(showSlides, 30000); // Change image every x seconds
       }
 
       setTimeout(function () { location.reload(1); }, 3600000);
